@@ -32,11 +32,13 @@ matrix:
       script:
         - yes | flutter doctor --android-licenses
         - flutter doctor && flutter -v build apk
+      before_deploy:
+        - bash ./generate_aars.sh
       deploy:
         provider: releases
         api_key: ${GITHUB_TOKEN}
         file:
-          - .android/Flutter/build/outputs/aar/flutter-release.aar
+          - .android/AARs/FlutterAARs.zip
         skip_cleanup: true
         on:
           tags: true

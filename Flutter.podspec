@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint FlutterEngine.podspec' to ensure this is a
+# Be sure to run `pod lib lint Flutter.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'FlutterEngine'
+  s.name             = 'Flutter'
   s.version          = '0.1.0'
   s.summary          = 'XXXXXXX'
 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/chenhang03/FlutterEngine'
+  s.homepage         = 'https://github.com/chenhang03/Flutter'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hangisnice' => 'hangisnice@gmail.com' }
   s.source       = { :git => "", :tag => "#{s.version}" }
@@ -29,8 +29,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
   s.dependency 'AFNetworking'
 
-  s.ios.vendored_frameworks = 'FlutterEngine/App.framework', 'FlutterEngine/Flutter.framework'
+  s.ios.vendored_frameworks = 'App.framework', 'Flutter.framework'
 
 
-  # s.public_header_files = 'FlutterEngine/Flutter.framework/Headers/*.h'
 end

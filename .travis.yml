@@ -50,16 +50,12 @@ matrix:
       script:
         - flutter doctor && flutter -v build ios --no-codesign
       before_deploy:
-        - mkdir .ios/Outputs && mkdir .ios/Outputs/FlutterEngine
-        - cp FlutterEngine.podspec .ios/Outputs/
-        - cp -r .ios/Flutter/App.framework/ .ios/Outputs/FlutterEngine/App.framework/
-        - cp -r .ios/Flutter/engine/Flutter.framework/ .ios/Outputs/FlutterEngine/Flutter.framework/
-        - pushd .ios/Outputs && zip -r FlutterEngine.zip  ./ && popd
+        - bash ./generate_pods.sh
       deploy:
         provider: releases
         api_key: ${GITHUB_TOKEN}
         file:
-          - .ios/Outputs/FlutterEngine.zip
+          - .ios/products/FlutterPods.zip
         skip_cleanup: true
         on:
           tags: true

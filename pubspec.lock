@@ -46,7 +46,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "9b4472aa46cf20c318b088573a30bc32c6961777"
+      resolved-ref: "353c6d5bec53becf9e1273ee34b7d6fadb6cfe71"
       url: "https://github.com/cyndibaby905/44_flutter_plugin_network.git"
     source: git
     version: "0.0.1"

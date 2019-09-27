@@ -1,8 +1,1 @@
-# flutter_module_demo
-
-A new Flutter module.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.dev/).
+本示例演示了一个使用原生网络插件的Flutter模块工程是如何导出原生构建产物的
